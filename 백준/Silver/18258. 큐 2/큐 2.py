@@ -1,3 +1,4 @@
+# 백 준 18258번 큐 2 문제 큐 영역
 import sys
 import queue
 from collections import deque
@@ -20,7 +21,7 @@ for i in range(N):
   elif command[0]=='size':
     print(myqueue.qsize())
   elif command[0]=='empty':
-    if myqueue.qsize()>=1:
+    if not myqueue.empty():
       print(0)
     else:
       print(1)
