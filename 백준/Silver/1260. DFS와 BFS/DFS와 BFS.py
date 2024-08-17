@@ -30,10 +30,12 @@ for _ in range(M):
     a, b = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
+    graph[a].sort()
+    graph[b].sort()
 
 # 정렬
-for i in graph:
-    i.sort()
+# for i in graph:
+#     i.sort()
 
 # dfs
 visited = [False] * (N + 1)
