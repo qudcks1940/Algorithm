@@ -4,23 +4,16 @@ input=sys.stdin.readline
 
 N=int(input().strip())
 
-min_time=[]
-sum=0
+min_B=sys.maxsize
+isKOI=False
 for _ in range(N):
-  A, B=map(int,input().strip().split())
-  count=0
-
-  
-  if A <= B:
-    min_time.append(B-A)
-    sum+=B-A
-  else:
-    min_time.append(B-A)
-    sum+=abs(B-A)
-  for i in min_time:
-    if i < 0:
-      count+=1
-if count==N:
-  print(-1)
+    A, B=map(int,input().strip().split())
+    if A <= B:
+        isKOI=True
+        if B < min_B:
+            min_B=B
+     
+if isKOI==False:
+    print(-1)
 else:
-  print(sum)
+    print(min_B)
