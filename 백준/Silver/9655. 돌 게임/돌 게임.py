@@ -1,5 +1,9 @@
 # 백준 9655 돌 게임
-n = int(input())
+import sys
+
+input=sys.stdin.readline
+
+n = int(input().strip())
 
 dp = [-1]*10001
 
