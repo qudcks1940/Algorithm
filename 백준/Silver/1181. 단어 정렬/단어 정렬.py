@@ -10,6 +10,5 @@ stack=[]
 for i in words:
   stack.append((len(i),i))
 
-answer=[]
 for j in sorted(set(stack)):
   print(j[1])
